@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">TodoListandroid</string>
+    <string name="app_name">Vue d\'ensemble</string>
+    <string name="vue_d_ensemble">Vue d\'ensemble</string>
+    <string name="text_1">Text 1</string>
+    <string name="options">Options</string>
+    <string name="addTodoList">+</string>
 </resources>
