@@ -1,10 +1,13 @@
 package com.example.todolistandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -22,25 +25,19 @@ public class Options extends AppCompatActivity implements OnItemSelectedListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.option_layout);
-        // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.font_spinner);
 
-        // Spinner click listener
         spinner.setOnItemSelectedListener(this);
 
-        // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
         categories.add("Petite");
         categories.add("Moyenne");
         categories.add("Grande");
 
-        // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
 
-        // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
 
         Button appliquer = findViewById(R.id.button);
@@ -48,9 +45,22 @@ public class Options extends AppCompatActivity implements OnItemSelectedListener
         appliquer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Créez un Intent pour démarrer une nouvelle activité
                 Intent intent = new Intent(Options.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        RadioGroup radioGroup = findViewById(R.id.Theme);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.buttonLight) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                } else if (checkedId == R.id.buttonDark) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
             }
         });
     }
