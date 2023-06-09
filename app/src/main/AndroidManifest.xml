@@ -17,6 +17,10 @@
         <activity
             android:name=".EditActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Options"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true" >
