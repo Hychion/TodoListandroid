@@ -1,4 +1,13 @@
 <resources>
+    <string name="app_name">TodoListandroid</string>
+    <string name="parametres">Paramètres</string>
+    <string name="theme">Thème :</string>
+    <string name="light_mode">Mode clair</string>
+    <string name="dark_mode">Mode sombre</string>
+    <string name="taille_police">Taille de la police :</string>
+    <string name="supprimer_automatiquement_les_todo_lists_compl_t_es">Supprimer automatiquement les TODO lists complétées</string>
+    <string name="sauvegarder_automatiquement_au_retour_arri_re">Sauvegarder automatiquement au retour arrière</string>
+    <string name="appliquer">Appliquer</string>
     <string name="app_name">Vue d\'ensemble</string>
     <string name="vue_d_ensemble">Vue d\'ensemble</string>
     <string name="text_1">Text 1</string>
