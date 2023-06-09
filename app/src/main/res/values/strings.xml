@@ -5,4 +5,7 @@
     <string name="light_mode">Mode clair</string>
     <string name="dark_mode">Mode sombre</string>
     <string name="taille_police">Taille de la police :</string>
+    <string name="supprimer_automatiquement_les_todo_lists_compl_t_es">Supprimer automatiquement les TODO lists complétées</string>
+    <string name="sauvegarder_automatiquement_au_retour_arri_re">Sauvegarder automatiquement au retour arrière</string>
+    <string name="appliquer">Appliquer</string>
 </resources>

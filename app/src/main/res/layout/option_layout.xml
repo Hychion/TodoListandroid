@@ -31,30 +31,34 @@
 
             <TextView
                 android:id="@+id/TextViewTheme"
-                android:padding="18dip"
+                android:padding="14dip"
                 android:text="@string/theme"
-                android:textSize="18sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:checkedButton="@+id/buttonLight"
+                android:layout_marginEnd="10dp">
 
                 <RadioButton
                     android:id="@+id/buttonLight"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:textSize="14sp"
                     android:text="@string/light_mode"
-                    android:layout_marginEnd="10dp"
                     />
 
                 <RadioButton
                     android:id="@+id/buttonDark"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:textSize="14sp"
                     android:text="@string/dark_mode"
-                    android:layout_marginStart="10dp"/>
+                    />
             </RadioGroup>
         </TableRow>
 
@@ -71,7 +75,7 @@
                 android:id="@+id/TextViewFont"
                 android:padding="18dip"
                 android:text="@string/taille_police"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textAlignment="center"/>
 
             <Spinner
@@ -80,6 +84,50 @@
                 android:layout_height="match_parent" />
 
         </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <CheckBox
+            android:id="@+id/AutoDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/supprimer_automatiquement_les_todo_lists_compl_t_es"
+            android:layoutDirection="rtl"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <CheckBox
+            android:id="@+id/AutoSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sauvegarder_automatiquement_au_retour_arri_re"
+            android:layoutDirection="rtl"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:checked="true"/>
     </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appliquer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
