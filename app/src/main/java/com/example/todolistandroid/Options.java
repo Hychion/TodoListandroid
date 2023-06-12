@@ -23,7 +23,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class Options extends AppCompatActivity implements OnItemSelectedListener {
-    int taillePolice = 15;
+    static int taillePolice = 15;
 
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     @Override
@@ -111,7 +111,7 @@ public class Options extends AppCompatActivity implements OnItemSelectedListener
         }
     }
 
-    private int getTaillePolice() {
+    static int getTaillePolice() {
         return taillePolice;
     }
 }
