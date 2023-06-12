@@ -67,11 +67,11 @@ public class Options extends AppCompatActivity implements OnItemSelectedListener
                     View rootView = getWindow().getDecorView().getRootView();
                     appliquerTaillePolice(rootView, taillePolice);
                 } else if (id == 1) {
-                    taillePolice = 15;
+                    taillePolice = 16;
                     View rootView = getWindow().getDecorView().getRootView();
                     appliquerTaillePolice(rootView, taillePolice);
                 } else {
-                    taillePolice = 18;
+                    taillePolice = 20;
                     View rootView = getWindow().getDecorView().getRootView();
                     appliquerTaillePolice(rootView, taillePolice);
                 }
