@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Options">
 
     <TextView
         android:id="@+id/textView"
@@ -37,30 +37,12 @@
                 android:textSize="14sp"
                 android:layout_marginEnd="10dp"/>
 
-            <RadioGroup
-                android:id="@+id/Theme"
+            <Switch
+                android:id="@+id/LightDark"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:checkedButton="@+id/buttonLight"
-                android:layout_marginEnd="10dp">
-
-                <RadioButton
-                    android:id="@+id/buttonLight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textSize="14sp"
-                    android:text="@string/light_mode"
-                    />
-
-                <RadioButton
-                    android:id="@+id/buttonDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textSize="14sp"
-                    android:text="@string/dark_mode"
-                    />
-            </RadioGroup>
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
         </TableRow>
 
         <View
@@ -80,9 +62,10 @@
                 android:textAlignment="center"/>
 
             <Spinner
-                android:id="@+id/font_spinner"
+                android:id="@+id/spinnerTaillePolice"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:entries="@array/tailles_police"/>
 
         </TableRow>
 

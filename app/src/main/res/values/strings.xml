@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TodoListandroid</string>
     <string name="parametres">Paramètres</string>
-    <string name="theme">Thème :</string>
+    <string name="theme">Activer le mode sombre :</string>
     <string name="light_mode">Mode clair</string>
     <string name="dark_mode">Mode sombre</string>
     <string name="taille_police">Taille de la police :</string>
