@@ -62,9 +62,10 @@
                 android:textAlignment="center"/>
 
             <Spinner
-                android:id="@+id/font_spinner"
+                android:id="@+id/spinnerTaillePolice"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:entries="@array/tailles_police"/>
 
         </TableRow>
 
