@@ -32,8 +32,6 @@ public class EditActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_edit);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
     @Override
