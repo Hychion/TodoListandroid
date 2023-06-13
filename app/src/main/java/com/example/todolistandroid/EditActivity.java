@@ -34,38 +34,6 @@ public class EditActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        TabLayout tabLayout = findViewById(R.id.categories);
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-
-        //Creation d'un nouveau EditText "tache"
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
-        ConstraintLayout constraintLayout = findViewById(R.id.page);
-        EditText editText = findViewById(R.id.task);
-        editText.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                String text = s.toString();
-                if (!text.isEmpty()) {
-                    EditText newEditText = new EditText(EditActivity.this);
-                    ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(
-                            ConstraintLayout.LayoutParams.MATCH_PARENT,
-                            ConstraintLayout.LayoutParams.WRAP_CONTENT
-                    );
-                    newEditText.setLayoutParams(params);
-                    newEditText.setHint("Nouvelle Tache...");
-                    constraintLayout.addView(newEditText, constraintLayout.indexOfChild(editText) + 1);
-                    editText.removeTextChangedListener(this); // Pour éviter une boucle infinie
-                }
-            }
-        });
     }
 
     @Override
@@ -76,7 +44,15 @@ public class EditActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.save) {
+            // Action à effectuer lorsque l'option de recherche est sélectionnée
+            return true;
+        } else if (itemId == R.id.reset) {
+            // Action à effectuer lorsque l'option de paramètres est sélectionnée
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

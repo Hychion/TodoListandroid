@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".EditActivity">
 
-    <androidx.appcompat.widget.Toolbar
+   <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -22,97 +22,76 @@
         android:ems="10"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
+        android:autofillHints=""
         android:hint="Titre de la liste des tâches"
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints" />
 
-    <HorizontalScrollView
-        android:id="@+id/barre_categories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/contenu"
+        android:layout_width="fill_parent"
+        android:layout_height="638dp"
+        tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@+id/todolist_title"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="107dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/liste"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/categories"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/task1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nouvelle Tache"
+                />
+
+            <CheckBox
+                android:id="@+id/complete1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints">
+                app:layout_constraintEnd_toEndOf="@+id/liste"
+                app:layout_constraintTop_toBottomOf="@+id/task1"/>
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Courses" />
+            <Button
+                android:id="@+id/delete1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="X"
+                app:layout_constraintTop_toBottomOf="@+id/task1"
+                tools:ignore="MissingConstraints" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Revisions" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Theatre" />
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Origami" />
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jeux videos" />
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CD à acheter" />
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Paroles de chansons" />
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="8h et quart, l'heure du ricard" />
-
-
-            </com.google.android.material.tabs.TabLayout>
         </LinearLayout>
-    </HorizontalScrollView>
 
-    <EditText
-        android:id="@+id/task"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="Nouvelle tache..."
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/barre_categories"
-        tools:ignore="MissingConstraints,NotSibling"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_margin="15dp" />
+    </ScrollView>
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#c0c0c0"
-        app:layout_constraintTop_toBottomOf="@+id/task"
-        tools:ignore="MissingConstraints" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
+    <Button
+        android:id="@+id/add_categorie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintLeft_toRightOf="@+id/task"
-        app:layout_constraintTop_toBottomOf="@+id/barre_categories"
+        android:text="Ajouter categ."
+        android:layout_marginStart="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/contenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/add_tache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter categ."
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenu"
+
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
