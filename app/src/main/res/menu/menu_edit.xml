@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/add_categorie"
-        android:title="Modifier categ." />
+        android:id="@+id/save"
+        android:title="Sauvegarder et quitter" />
     <item
-        android:id="@+id/menu_item2"
-        android:title="Annuler les modifs" />
+        android:id="@+id/reset"
+        android:title="Annuler les modifs." />
 </menu>
